@@ -28,22 +28,21 @@
                transform: translateX(-50%)
             }
 
+            .v-center {
+               position: relative;
+               top: 50%;
+               transform: translateY(-50%)
+            }
+
             .flex-v-center {
                align-items: center
             }
             
-            .flex-center {
-               justify-content: center;
-               align-items: center;
-            }
-
             button.no-focus:focus {
                outline: none;
                border-color: white;
                box-shadow: none
             }
-
-
       </style>
       <!-- /Custom styles  -->
    </head>
@@ -51,10 +50,10 @@
       <!-- Custom class Page containing the full page  -->
       <div class="Page has-background-grey-lighter">
          <div class="page-content h-center has-background-light">
-            <!-- Profile info  -->
+
             <div class="hero"> 
                <div class="hero-body" style="box-shadow: none">
-                  
+                  <!-- Profile info  -->
                   <div class="columns flex-v-center" style="padding:20px 0px 20px 0px">
                      <!-- Profile pic  -->
                      <div class="column">
@@ -68,7 +67,6 @@
                      <div class="column is-three-quarters">
                         <div class="content notification">
                            <p class="title has-text-primary" style="display:inline-block; margin-bottom:15px"> User name </p>
-                           <!-- <p class="subtitle"> Biography: </p> -->
                            <p>
                            Perferendis ratione veniam et at. Vero delectus dolorum fugiat ea fugit ut.
 
@@ -83,24 +81,23 @@
                         </div>
                         <!-- User name & Biography  -->
                      </div>                 
-                     <!-- /User name  -->
                   </div>
+                  <!-- /Profile info  -->
+
+                  <!-- Chat button  -->
+                  <div class="content">
+                     <p class="subtitle has-round-borders notification is-primary h-center" style="padding: 10px 20px 10px 20px; display:inline-block"> chat </p>
+                  </div>
+                  <!-- /Chat button  -->
+
                </div>
             </div>
-            <!-- /Profile info  -->
-
-
-            <!-- Chat button  -->
-            <div class="content">
-               <p class="subtitle has-round-borders notification is-primary h-center" style="padding: 10px 20px 10px 20px; display:inline-block"> chat </p>
-            </div>
-            <!-- /Chat button  -->
 
             <!-- Post separator  -->
-            <div class="media is-radiusless has-background-grey notification is-fullwidth has-20-v-margin">
+            <div class="media is-radiusless has-background-grey notification is-fullwidth has-20-v-margin flex-v-center">
 
                <div class="media-content">
-                  <p class="has-text-light"> POSTS: </p> 
+                  <p class="has-text-light" style="display:inline-block"> POSTS: </p> 
                </div>
 
                <div class="media-right">
