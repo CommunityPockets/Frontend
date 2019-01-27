@@ -1,0 +1,230 @@
+<!-- This is the preview of the External Profile view. Colors are to be modified later.  -->
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" name='viewport' content="width=device-width, intial-scale=1.0">
+      <title>Profile view</title>
+      <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+      <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+      <!-- Custom styles  -->
+      <style type="text/css">
+            .Page {
+               width: 100vw;
+               min-height: 100vh
+            }
+
+            .page-content {
+               margin: 0px;
+               max-width: 868px; 
+            }
+
+            .has-round-borders {
+               border-radius: 20px;
+               -moz-border-radius: 20px;
+               -webkit-border-radius: 20px;
+            }
+
+            .h-center {
+               position: relative;
+               left: 50%;
+               transform: translateX(-50%);
+               /* browser compatibility */
+               -ms-transform: translateX(-50%);
+               -sand-transform: translateX(-50%);
+               -webkit-transform: translateX(-50%);
+               -moz-transform: translateX(-50%);
+               -o-transform: translateX(-50%);
+               -ms-transform: translateX(-50%);
+            }
+
+            .v-center {
+               position: relative;
+               top: 50%;
+               transform: translateY(-50%);
+               /* browser compatibility */
+               -ms-transform: translateY(-50%);
+               -sand-transform: translateY(-50%);
+               -webkit-transform: translateY(-50%);
+               -moz-transform: translateY(-50%);
+               -o-transform: translateY(-50%);
+               -ms-transform: translateY(-50%);
+            }
+
+            .flex-v-center {
+               align-items: center;
+               -webkit-align-items: center;
+            }
+            
+            button.no-focus:focus {
+               outline: none;
+               border-color: white;
+               box-shadow: none;
+               -webkit-box-shadow: none;
+               -moz-box-shadow: none;
+            }
+
+            @media only screen and (max-width: 768px) {
+               #username {
+                  text-align: center;
+               }
+            }
+      </style>
+      <!-- /Custom styles  -->
+   </head>
+   <body>
+      <!-- Custom class Page containing the full page  -->
+      <div class="Page has-background-grey-lighter">
+         <div class="page-content h-center has-background-light">
+
+            <div class="hero"> 
+               <div class="hero-body" style="box-shadow: none">
+                  <!-- Profile info  -->
+                  <div class="columns flex-v-center" style="padding:20px 0px 20px 0px">
+                     <!-- Profile pic  -->
+                     <div class="column">
+                        <figure class="image">
+                           <img class="is-rounded h-center" src="images/profile-pic.png" style="max-width:128px;"/>
+                        </figure>
+                     </div>
+                     <!-- /Profile pic  -->
+
+                     <!-- User name & Biography  -->
+                     <div class="column is-three-quarters">
+                        <div class="content notification">
+                           <p id="username" class="title has-text-primary" style="margin-bottom:15px"> User name </p>
+                           <p>
+                           Perferendis ratione veniam et at. Vero delectus dolorum fugiat ea fugit ut.
+
+                           Fugit minima molestidignissimos ut blanditiis. Aspernatur similique
+                           velit magnam fuga ne. Aperiam ex et odit est ullam eum. Tempora eaque temporibus 
+                           nihil voluptatem similique iusto debitis.
+                           </p>
+                           <div class="content">
+                              <span class="has-text-dark-light"> Posts writen: 132</span>
+                              <span style="float: right"> joined: 23/01/2018 </span>
+                           </div>
+                        </div>
+                        <!-- User name & Biography  -->
+                     </div>                 
+                  </div>
+                  <!-- /Profile info  -->
+
+                  <!-- Chat button  -->
+                  <div class="content">
+                     <button class="button subtitle has-round-borders notification is-primary h-center" style="padding: 10px 20px 10px 20px; display:inline-block"> chat </button>
+                  </div>
+                  <!-- /Chat button  -->
+
+               </div>
+            </div>
+
+            <!-- Post separator  -->
+            <div class="media is-radiusless has-background-grey notification is-fullwidth flex-v-center">
+
+               <div class="media-content">
+                  <p class="has-text-light" style="display:inline-block"> POSTS: </p> 
+               </div>
+
+               <div class="media-right">
+
+                  <!-- Dropdown  -->
+                  <div class="dropdown is-right">
+
+                     <div class="dropdown-trigger">
+                        <button class="button no-focus has-background-grey has-text-light" aria-haspopup="true" aria-controls="dropdown-menu">
+                           <span>Sort by</span>
+                           <span class="icon is-small">
+                              <i class="fa fa-angle-down" aria-hidden="true"></i>
+                           </span>
+                        </button>
+                     </div>
+
+                     <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                        <div class="dropdown-content">
+
+                           <a class="dropdown-item">
+                              time: newer to oldest
+                           </a>
+
+                           <a class="dropdown-item">
+                              punctuation
+                           </a>
+
+                           <a class="dropdown-item">
+                              time: oldest to newer
+                           </a>
+
+                        </div> 
+                     </div>
+                  </div>
+                  <!-- Dropdown  -->
+               </div>
+            </div>
+            <!-- /Post separator  -->
+
+            <!-- Posts  -->
+            <div class="content" style="padding: 0px 10px 0px 10px">
+               <div class="columns">
+
+                  <section class="column">
+                     <!-- Post  -->
+                     <div class="content notification has-background-white" style="height:240px; overflow: hidden; box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.1)">
+                        <p class="subtitle has-text-dark"> This is the title of this post </p>
+
+                        <div class="media">
+                           <div class="media-content">
+                              <p>
+                              Suscipit aspernatur et nostrum ut maiores qui quas. Et voluptatem
+                              alias dolorem. Tenetur eaque delectus qui doloremque praesentium aut
+                              vero. Voluptatibus est cumque et tempora dignissimos.
+                              </p>
+                           </div>   
+
+                           <div class="media-right is-paddingless">
+                              <figure class="image is-marginless">
+                                 <img src="images/post-preview.png" style="max-width:128px"/>
+                              </figure>
+                           </div>
+                        </div>
+
+                     </div>
+                     <!-- /Post  -->
+                  </section>
+
+                  <section class="column">
+                     <!-- Post  -->
+                     <div class="content notification has-background-white" style="height:240px; overflow: hidden; box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.1)">
+                        <p class="subtitle"> This is the title of this post </p>
+
+                        <div class="media">
+                           <div class="media-content">
+                              <p>
+                              this is a small post
+                              </p>
+                           </div>   
+
+                           <div class="media-right is-paddingless">
+                              <figure class="image is-marginless">
+                                 <img src="images/post-preview.png" style="max-width:128px"/>
+                              </figure>
+                           </div>
+                        </div>
+
+                     </div>
+                     <!-- /Post  -->
+                  </section>
+               </div>
+            </div>
+
+         </div>
+      </div> 
+      <!-- /Page  -->
+   <script type="text/javascript">
+      var dropdown = document.querySelector('.dropdown');
+         dropdown.addEventListener('click', function(event) {
+            event.stopPropagation();
+            dropdown.classList.toggle('is-active');
+      });
+   </script>
+   </body>
+</html>
