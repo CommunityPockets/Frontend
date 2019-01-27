@@ -20,28 +20,53 @@
 
             .has-round-borders {
                border-radius: 20px;
+               -moz-border-radius: 20px;
+               -webkit-border-radius: 20px;
             }
 
             .h-center {
                position: relative;
                left: 50%;
-               transform: translateX(-50%)
+               transform: translateX(-50%);
+               /* browser compatibility */
+               -ms-transform: translateX(-50%);
+               -sand-transform: translateX(10deg);
+               -webkit-transform: translateX(-10deg);
+               -moz-transform: translateX(-10deg);
+               -o-transform: translateX(-10deg);
+               -ms-transform: translateX(-10deg);
             }
 
             .v-center {
                position: relative;
                top: 50%;
-               transform: translateY(-50%)
+               transform: translateY(-50%);
+               /* browser compatibility */
+               -ms-transform: translateY(-50%);
+               -sand-transform: translateY(10deg);
+               -webkit-transform: translateY(-10deg);
+               -moz-transform: translateY(-10deg);
+               -o-transform: translateY(-10deg);
+               -ms-transform: translateY(-10deg);
             }
 
             .flex-v-center {
-               align-items: center
+               align-items: center;
+               -webkit-align-items: center;
             }
             
             button.no-focus:focus {
                outline: none;
                border-color: white;
-               box-shadow: none
+               box-shadow: none;
+               -webkit-box-shadow: none;
+               -moz-box-shadow: none;
+            }
+
+            @media only screen and (max-width: 768px) {
+               #username {
+                  text-align: center;
+               }
             }
       </style>
       <!-- /Custom styles  -->
@@ -66,7 +91,7 @@
                      <!-- User name & Biography  -->
                      <div class="column is-three-quarters">
                         <div class="content notification">
-                           <p class="title has-text-primary" style="display:inline-block; margin-bottom:15px"> User name </p>
+                           <p id="username" class="title has-text-primary" style="margin-bottom:15px"> User name </p>
                            <p>
                            Perferendis ratione veniam et at. Vero delectus dolorum fugiat ea fugit ut.
 
@@ -86,7 +111,7 @@
 
                   <!-- Chat button  -->
                   <div class="content">
-                     <p class="subtitle has-round-borders notification is-primary h-center" style="padding: 10px 20px 10px 20px; display:inline-block"> chat </p>
+                     <button class="button subtitle has-round-borders notification is-primary h-center" style="padding: 10px 20px 10px 20px; display:inline-block"> chat </button>
                   </div>
                   <!-- /Chat button  -->
 
@@ -94,7 +119,7 @@
             </div>
 
             <!-- Post separator  -->
-            <div class="media is-radiusless has-background-grey notification is-fullwidth has-20-v-margin flex-v-center">
+            <div class="media is-radiusless has-background-grey notification is-fullwidth flex-v-center">
 
                <div class="media-content">
                   <p class="has-text-light" style="display:inline-block"> POSTS: </p> 
