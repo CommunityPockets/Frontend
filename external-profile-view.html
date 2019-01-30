@@ -6,7 +6,7 @@
       <title>Profile view</title>
       <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
       <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-      <!-- Custom styles  -->
+      <!-- Custom styles   -->
       <style type="text/css">
             .Page {
                width: 100vw;
@@ -19,9 +19,9 @@
             }
 
             .has-round-borders {
-               border-radius: 20px;
-               -moz-border-radius: 20px;
-               -webkit-border-radius: 20px;
+               border-radius: 25px;
+               -moz-border-radius: 25px;
+               -webkit-border-radius: 25px;
             }
 
             .h-center {
@@ -54,13 +54,29 @@
                align-items: center;
                -webkit-align-items: center;
             }
-            
+
+            .has-box-shadow {
+               box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+               -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+               -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+            }
+
             button.no-focus:focus {
                outline: none;
                border-color: white;
                box-shadow: none;
                -webkit-box-shadow: none;
                -moz-box-shadow: none;
+            }
+            
+            /* Prevent user selection */
+            .no-selection {
+               -webkit-user-select: none;
+               -khtml-user-select: none;
+               -moz-user-select: -moz-none;
+               -ms-select: none;
+               -o-user-select: none;
+               user-select: none;
             }
 
             @media only screen and (max-width: 768px) {
@@ -74,16 +90,17 @@
    <body>
       <!-- Custom class Page containing the full page  -->
       <div class="Page has-background-grey-lighter">
-         <div class="page-content h-center has-background-light">
+         <div class="page-content h-center has-background-light has-box-shadow">
 
             <div class="hero"> 
                <div class="hero-body" style="box-shadow: none">
                   <!-- Profile info  -->
-                  <div class="columns flex-v-center" style="padding:20px 0px 20px 0px">
+                  <div class="columns flex-v-center" style="padding:15px 0px 15px 0px">
                      <!-- Profile pic  -->
                      <div class="column">
-                        <figure class="image">
-                           <img class="is-rounded h-center" src="images/profile-pic.png" style="max-width:128px;"/>
+                        <!-- prevent user dragging  -->
+                        <figure class="image" ondragstart="return false;">
+                           <img class="is-rounded h-center no-selection" src="images/profile-pic.png" style="max-width:128px;"/>
                         </figure>
                      </div>
                      <!-- /Profile pic  -->
@@ -91,7 +108,7 @@
                      <!-- User name & Biography  -->
                      <div class="column is-three-quarters">
                         <div class="content notification">
-                           <p id="username" class="title has-text-primary" style="margin-bottom:15px"> User name </p>
+                           <p id="username" class="title has-text-dark-light" style="margin-bottom:15px"> User name </p>
                            <p>
                            Perferendis ratione veniam et at. Vero delectus dolorum fugiat ea fugit ut.
 
@@ -100,8 +117,8 @@
                            nihil voluptatem similique iusto debitis.
                            </p>
                            <div class="content">
-                              <span class="has-text-dark-light"> Posts writen: 132</span>
-                              <span style="float: right"> joined: 23/01/2018 </span>
+                              <span class="has-text-grey"> Posts written: 132</span>
+                              <span class="has-text-grey" style="float: right"> joined: 23/01/2018 </span>
                            </div>
                         </div>
                         <!-- User name & Biography  -->
@@ -111,7 +128,7 @@
 
                   <!-- Chat button  -->
                   <div class="content">
-                     <button class="button subtitle has-round-borders notification is-primary h-center" style="padding: 10px 20px 10px 20px; display:inline-block"> chat </button>
+                     <button class="button subtitle has-round-borders notification is-primary h-center" style="padding: 10px 20px 10px 20px; display:inline-block; font-size:135%"> chat </button>
                   </div>
                   <!-- /Chat button  -->
 
@@ -122,7 +139,7 @@
             <div class="media is-radiusless has-background-grey notification is-fullwidth flex-v-center">
 
                <div class="media-content">
-                  <p class="has-text-light" style="display:inline-block"> POSTS: </p> 
+                  <p class="has-text-light no-selection" style="display:inline-block"> POSTS: </p> 
                </div>
 
                <div class="media-right">
@@ -168,12 +185,12 @@
 
                   <section class="column">
                      <!-- Post  -->
-                     <div class="content notification has-background-white" style="height:240px; overflow: hidden; box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.1)">
+                     <div class="content notification has-background-white has-box-shadow" style="height:240px;overflow: hidden">
                         <p class="subtitle has-text-dark"> This is the title of this post </p>
 
                         <div class="media">
                            <div class="media-content">
-                              <p>
+                              <p style="max-height:120px; overflow:hidden">
                               Suscipit aspernatur et nostrum ut maiores qui quas. Et voluptatem
                               alias dolorem. Tenetur eaque delectus qui doloremque praesentium aut
                               vero. Voluptatibus est cumque et tempora dignissimos.
@@ -181,8 +198,8 @@
                            </div>   
 
                            <div class="media-right is-paddingless">
-                              <figure class="image is-marginless">
-                                 <img src="images/post-preview.png" style="max-width:128px"/>
+                              <figure class="image is-marginless" ondragstart="return false;">
+                                 <img class="no-selection" src="images/post-preview.png" style="max-width:128px"/>
                               </figure>
                            </div>
                         </div>
@@ -193,19 +210,19 @@
 
                   <section class="column">
                      <!-- Post  -->
-                     <div class="content notification has-background-white" style="height:240px; overflow: hidden; box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.1)">
+                     <div class="content notification has-background-white has-box-shadow" style="height:240px; overflow: hidden">
                         <p class="subtitle"> This is the title of this post </p>
 
                         <div class="media">
                            <div class="media-content">
-                              <p>
+                              <p style="max-height:120px; overflow:hidden">
                               this is a small post
                               </p>
                            </div>   
 
                            <div class="media-right is-paddingless">
-                              <figure class="image is-marginless">
-                                 <img src="images/post-preview.png" style="max-width:128px"/>
+                              <figure class="image is-marginless" ondragstart="return false;">
+                                 <img class="no-selection" src="images/post-preview.png" style="max-width:128px"/>
                               </figure>
                            </div>
                         </div>
